@@ -25,36 +25,49 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<!-- Encabezado -->
+				<!-- Encabezado de la presentación-->
 				<p style="text-align: right;"><small style="color: LIGHTGRAY; font-size: 0.4em;">Teclados mecánicos 101 <a href="https://didaquis.github.io" style="color: darkgray; text-decoration: underline; margin-left: 10px;">didaquis.github.io</a></small></p>
+
+
+<!-- 
+
+ ****** Voy a intentar usar este: 
+Are ya yellow?!: #feda6a
+Silver Fox: #d4d4dc
+Deep Matte Grey: #393f4d
+Dark Slate: #1d1e22
+******
+
+Dark Grey: #393939
+#12343b
+
+----------
+Sand Tan: #e1b382
+Sand Tan Shadow: #c89666
+Night Blue: #2d545e
+Night Blue Shadow: #12343b
+----------
+ -->
+
+<!-- 
+
+Portada
+De que voy a hablar?
+¿quien soy yo?
+
+Preguntas?
+ -->
 				<!-- Inicio de las slides -->
-				<section>
-					Slide 1 WIP
-					<aside class="notes">
-						This slide has fragments which are also stepped through in the notes window.
-					</aside>
-				</section>
-				<section>
-					Slide 2
-					<pre><code class="hljs javascript" data-trim data-line-numbers>
-						const fruit = 'strawberry';
-						const criteria = ['apple', 'strawberry', 'cranberries'];
-
-						if (criteria.includes(fruit)) {
-							// true
-						}
-					</code></pre>
-				</section>
-				<section>Slide 3</section>
 				<section data-markdown>
-					  ## Markdown support!
-
-					  Write content using inline or external Markdown.
-					  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+					<script type="text/template">
+						<!-- .slide: data-background="#1d1e22" -->
+						# Teclados mecánicos 101
+					</script>
 				</section>
-				<section>Slide 4</section>
 
-
+				<section>
+					
+				</section>
 				<!-- final de las slides -->
 			</div>
 		</div>
@@ -67,6 +80,8 @@
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
 				hash: true,
+				controls: false,
+				progress: false,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },

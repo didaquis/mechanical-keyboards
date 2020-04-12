@@ -46,8 +46,11 @@ Un listado de teclas útiles:
 </section>
 
 <section data-markdown>
-	  ## Markdown support!
+	<script type="text/template">
+		<!-- .slide: data-background="#1d1e22" -->
+		## Markdown support!
 
-	  Instructions and more info [here](https://github.com/hakimel/reveal.js#markdown).
+		Instructions and more info [here](https://github.com/hakimel/reveal.js#markdown).
+	</script>
 </section>
 ```
