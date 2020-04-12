@@ -21,4 +21,33 @@ Un listado de teclas útiles:
 | F | Visualizar la presentación a pantalla completa (ESC para salir) |
 | B | Pausa la presentación |
 | S | Lanza una venta para que el orador visualize sus notas, el tiempo transcurrido y la próxima presentación | 
+| ALT + click | Realiza un zoom en el lugar donde hayas clicado. Repite la combinación para vover a la vista normal (debes cargar el plugin: zoom) | 
 
+
+## Algunos consejos para crear slides
+```html
+<section>
+	...
+	<aside class="notes">
+		Esto son las notas para el orador
+	</aside>
+</section>
+
+<section>
+	...
+	<pre><code class="hljs javascript" data-trim data-line-numbers>
+		const fruit = 'strawberry';
+		const criteria = ['apple', 'strawberry', 'cranberries'];
+
+		if (criteria.includes(fruit)) {
+			// true
+		}
+	</code></pre>
+</section>
+
+<section data-markdown>
+	  ## Markdown support!
+
+	  Instructions and more info [here](https://github.com/hakimel/reveal.js#markdown).
+</section>
+```
