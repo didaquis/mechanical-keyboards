@@ -3,6 +3,8 @@
 Este repositorio contiene la presentación de una charla introductoria a los teclados mecánicos.
 
 ## Para iniciar la presentación
+Iniciar la presentación requiere Node.js versión 9 o superior. La presentación esta realizada con [Reveal.js](https://github.com/hakimel/reveal.js)  
+
 * Descargar el repositorio
 * Instalar las dependencias: `npm install`
 * Iniciar la presentación: `npm start` o bien `npm start -- --port=8001` si quieres usar un puerto específico
@@ -10,7 +12,7 @@ Este repositorio contiene la presentación de una charla introductoria a los tec
 
 ## Consejos de uso
 
-Documentación oficial de Reveal.js: [enlace](./docs_reveal.js.md)
+Documentación oficial de Reveal.js: [enlace](./docs_reveal.js.md)  
 
 Un listado de teclas útiles: 
 
