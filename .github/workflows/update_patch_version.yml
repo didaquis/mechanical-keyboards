@@ -1,0 +1,23 @@
+
+name: Bump patch version
+on:
+  push:
+    push:
+      branches: [ develop ]
+      paths-ignore:
+        - 'package.json'
+    pull_request:
+      branches: [ develop ]
+      paths-ignore:
+        - 'package.json'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Get Bumped Semantic Patch Version
+      id: bsv
+      uses: ./
+      with:
+        semantic-version: ${{ steps.lrb.outputs.last-semver }}
+        version-type: 'PATCH'
