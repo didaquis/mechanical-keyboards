@@ -102,10 +102,10 @@ Preguntas?
 				</section>
 
 				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p><small>Para que os conozca un poco...</small></p>
 					<h3>¿Cuántos de vosotros tenéis un teclado mecánico?</h3>
 
 					<aside class="notes">
+						Para que os conozca un poco...<br>
 						Pregunta para los que no tiene un teclado mecánico: ¿Cuántos de vosotros habéis probado un teclado mecánico alguna vez?
 					</aside>
 				</section>
@@ -206,7 +206,7 @@ Preguntas?
 						Dvorak => Diseñado por August Dvorak y William Dealey para ser eficiente, menor fatiga al usuario (escritura en inglés) (1936). No cuajó: USA aún estaba saliendo de la gran depresión, 2ª guerra mundial, la costumbre establecida. etc. Parece ser que es útil para los que padecen síndrome de túnel carpiano.<br>
 						Palabras difíciles de escribir en QWERTY: "mínimo", "cerveza".<br>
 						Todos los SO tiene soporte para Dvorak en inglés, es un estándar.<br>
-						Existen otros no tan comunes: Colemak y Workman.
+						Existen otros no tan comunes: Bépo, Colemak y Workman. https://bepo.fr/wiki/Accueil, https://colemak.com y https://workmanlayout.org
 					</aside>
 				</section>
 
@@ -223,6 +223,10 @@ Preguntas?
 						<li>Tenkeyless (TKL, 80%)</li>
 						<li>60%</li>
 					</ul>
+
+					<aside class="notes">
+						"form factor"
+					</aside>
 				</section>
 
 				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
@@ -354,7 +358,6 @@ Preguntas?
 				</section>
 
 				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Switches</h3>
 					<p>Clicky vs linear vs tactile</p>
 					<img data-src="./resources/mechanism/cherry_mx_blue_switch_optimized.gif" alt="switch Cherry MX blue" width="32%" style="border: none; background: none; box-shadow: none;">
 					<img data-src="./resources/mechanism/cherry_mx_red_switch_optimized.gif" alt="switch Cherry MX red" width="32%" style="border: none; background: none; box-shadow: none;">
@@ -370,11 +373,51 @@ Preguntas?
 				</section>
 
 				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Switches</h3>
+					<p>debounce time?</p>
+					<img data-src="./resources/keyboards-issues/analog_waveform_cherry_mx.png" alt="respuesta de Cherry MX en un osciloscopio" width="70%" style="border: none; background: none; box-shadow: none;">
+
+					<aside class="notes">
+						Osciloscopio. Es un instrumento para la representación gráfica de señales eléctricas que pueden variar en el tiempo.<br>
+						El tiempo de "debounce" (fluctuación) en un switch Cherry MX puede llegar a 5ms. Podríamos decir, que un teclado mécanico tiene una latencia media de 15-25ms, mientras que un teclado de membrana tiene una latencia por encima de 30ms. En un teclado de baja calidad puede llegar a 60ms<br>
+						Ahora bien, o nos importa. Hay otros factores que afectan a la latencia: recorrido de la tecla, la percepción humana a un estímulo, tasa de refresco del monitor, el sistema de polling de los USB, etc.<br>
+						Dado que esto no es una charla sobre gaming, lo resumiremos en que nos dan igual estos factores si compramos un teclado bueno (independientemente de que sea mecánico o no).<br>
+						--------<br>
+						De promedio, un monitor a 60Hz muestra un frame por 8.5ms. No se puede medir el lag de un teclado mirando un monitor, ni siquiera con uno de 144Hz.<br>
+						--------<br>
+						USB polling is a limiting factor.
+
+						The polling rate defines the maximum delay from the usb connection. At 125hz you can have 0ms to 8ms delay with an average of 4ms. At 1000hz 0ms to 1ms with average 0.5ms. The average difference between 125hz and 1000hz in theory should be 3.5ms which the data confirm.
+
+						The keyboard scan rate can happen at different frequencies, often referred to as an x amount of hertz (Hz), just like the USB polling rate. A scan rate of 1000hz is equal to 1ms. This means that the MCU will check every key, every 1ms for input. 
+
+						Common frequencies:
+						• 125hz / 8ms (esto es peor)
+						• 250hz / 4ms
+						• 500hz / 2ms
+						• 1000hz / 1ms  (esto es mejor)
+					</aside>
+				</section>
+
+				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+					<p>switch óptico</p>
 					<img data-src="./resources/mechanism/razer-opto-mechanical-switch_switch optico_bis.gif" alt="switch óptico" style="border: none; background: none; box-shadow: none;">
 
 					<aside class="notes">
-						Emite un led infrarojo, una fotorresistencia.
+						Emite un led infrarojo, una fotorresistencia.<br>
+						Útil para gaming, irrelevante para escritura.<br>
+						Lo están comercializando las marcas de gaming sólo en sus modelos de gama alta.
+					</aside>
+				</section>
+
+				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+					<p>clásico vs óptico</p>
+					<img data-src="./resources/keyboards-issues/digital_cuircuits_debounce_01.png" alt="debounce time clásico" width="49%" style="border: none; background: none; box-shadow: none;">
+					<img data-src="./resources/keyboards-issues/digital_cuircuits_debounce_02.png" alt="debounce time óptico" width="49%" style="border: none; background: none; box-shadow: none;">
+
+					<aside class="notes">
+						Imágenes correspondientes a un ratón, pero conceptualmente es lo mismo para un teclado. Es un problema estándar en cualquier interruptor en un circuito digital.<br>
+						Clásico => Mecánico, membrana, tijera, etc.<br>
+						Óptico => <br>
 					</aside>
 				</section>
 
@@ -392,13 +435,11 @@ Preguntas?
 
 
 				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Keycaps</h3>
 					<p>Los principales materiales son: ABS y PBT.</p>
 					<p>Tienen diferente tacto y durabilidad</p>
 				</section>
 
 				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Keycaps</h3>
 					<p>ABS</p>
 					<img data-src="./resources/keycaps/abs.png" alt="abs" width="76%" style="border: none; background: none; box-shadow: none;">
 					<aside class="notes">
@@ -408,7 +449,6 @@ Preguntas?
 				</section>
 
 				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Keycaps</h3>
 					<p>PBT</p>
 					<img data-src="./resources/keycaps/pbt.png" alt="abs" width="70%" style="border: none; background: none; box-shadow: none;">
 					<aside class="notes">
@@ -418,7 +458,6 @@ Preguntas?
 				</section>
 
 				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Keycaps</h3>
 					<p>Grosor, forma y perfil</p>
 					<img data-src="./resources/keycaps/forma_de_tecla.png" alt="diferente forma de tecla" style="border: none; background: none; box-shadow: none;">
 					<aside class="notes">
@@ -429,13 +468,11 @@ Preguntas?
 				</section>
 
 				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Keycaps</h3>
 					<p>Grosor, forma y perfil</p>
 					<img data-src="./resources/keycaps/teclas.png" alt="diferente forma de tecla" style="border: none; background: none; box-shadow: none;">
 				</section>
 
 				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Keycaps</h3>
 					<p>Grosor, forma y perfil</p>
 					<img data-src="./resources/keycaps/profile_02.png" alt="diferente perfil de tecla" style="border: none; background: none; box-shadow: none;">
 					<aside class="notes">
@@ -458,7 +495,6 @@ Preguntas?
 				</section>
 
 				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Keycaps</h3>
 					<p>Deben de encajar con el correspondiente switch</p>
 
 					<img src="./resources/keycaps/Key_Steams_Topre.png" alt="keycap de tipo Topre" width="38%" style="border: none; background: none; box-shadow: none;">
@@ -471,7 +507,6 @@ Preguntas?
 				</section>
 
 				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Keycaps</h3>
 					<p>Existenten diferentes sistemas de impresión</p>
 
 					<img src="./resources/keycaps/keycaps_fun.png" alt="keycaps con dibujos chulos" style="border: none; background: none; box-shadow: none;">
@@ -484,7 +519,6 @@ Preguntas?
 
 
 				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Keycaps</h3>
 					<p>Double shot injection</p>
 
 					<img src="./resources/keycaps/doubleshot_01.png" alt="Double shot injection" style="border: none; background: none; box-shadow: none;">
@@ -496,7 +530,6 @@ Preguntas?
 				</section>
 
 				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Keycaps</h3>
 					<p>Se pueden hacer teclas muy bonitas y trabajadas</p>
 
 					<img src="./resources/keycaps/fun_keycap.png" alt="keycap personalizada" width="80%" style="border: none; background: none; box-shadow: none;">
@@ -506,8 +539,6 @@ Preguntas?
 						Observad que esta tecla tiene relieve en 4 caras distintas y esta hecha en múltiples colores.
 					</aside>
 				</section>
-
-
 
 
 
@@ -650,6 +681,7 @@ Preguntas?
 							https://en.wikipedia.org/wiki/Model_M_keyboard  
 							IBM Model M https://youtu.be/XQlG8toXRzU  
 							https://www.reddit.com/r/MechanicalKeyboards/wiki/index  
+							https://blog.wooting.nl/what-influences-keyboard-speed  
 						</script>
 					</section>
 				</section>
