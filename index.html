@@ -378,7 +378,17 @@ Preguntas?
 
 					<aside class="notes">
 						Osciloscopio. Es un instrumento para la representación gráfica de señales eléctricas que pueden variar en el tiempo.<br>
-						El tiempo de "debounce" (fluctuación) en un switch Cherry MX puede llegar a 5ms. Podríamos decir, que un teclado mécanico tiene una latencia media de 15-25ms, mientras que un teclado de membrana tiene una latencia por encima de 30ms. En un teclado de baja calidad puede llegar a 60ms<br>
+						Este imagen muestra la fluctuación que se produce en un interruptor de un circuito digital.<br>
+						Voltios por tiempo.
+					</aside>
+				</section>
+
+				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+					<p>debounce time?</p>
+					<img data-src="./resources/keyboards-issues/switch_debounce_digital_circuitos.png" alt="respuesta de Cherry MX en un osciloscopio" width="70%" style="border: none; background: none; box-shadow: none;">
+
+					<aside class="notes">
+						El tiempo de "debounce" en un switch Cherry MX puede llegar a 5ms. Podríamos decir, que un teclado mécanico tiene una latencia media de 15-25ms, mientras que un teclado de membrana tiene una latencia por encima de 30ms. En un teclado de baja calidad puede llegar a 60ms<br>
 						Ahora bien, o nos importa. Hay otros factores que afectan a la latencia: recorrido de la tecla, la percepción humana a un estímulo, tasa de refresco del monitor, el sistema de polling de los USB, etc.<br>
 						Dado que esto no es una charla sobre gaming, lo resumiremos en que nos dan igual estos factores si compramos un teclado bueno (independientemente de que sea mecánico o no).<br>
 						--------<br>
@@ -391,7 +401,7 @@ Preguntas?
 						The keyboard scan rate can happen at different frequencies, often referred to as an x amount of hertz (Hz), just like the USB polling rate. A scan rate of 1000hz is equal to 1ms. This means that the MCU will check every key, every 1ms for input. 
 
 						Common frequencies:
-						• 125hz / 8ms (esto es peor)
+						• 125hz / 8ms (esto lo estandar)
 						• 250hz / 4ms
 						• 500hz / 2ms
 						• 1000hz / 1ms  (esto es mejor)
@@ -417,7 +427,7 @@ Preguntas?
 					<aside class="notes">
 						Imágenes correspondientes a un ratón, pero conceptualmente es lo mismo para un teclado. Es un problema estándar en cualquier interruptor en un circuito digital.<br>
 						Clásico => Mecánico, membrana, tijera, etc.<br>
-						Óptico => <br>
+						Óptico => Nuevos switches led<br>
 					</aside>
 				</section>
 
