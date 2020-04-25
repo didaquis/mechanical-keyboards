@@ -21,15 +21,33 @@
 			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
+		<style type="text/css">
+			h3 {
+				color: #ff6347 !important;/* #ff6347 = tomato */
+			}
+
+			ul {
+				margin-top: 30px !important;
+			}
+
+			ul li {
+				list-style-type: circle;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<!-- Encabezado de la presentación-->
-				<!-- <p style="text-align: right;"><small style="color: LIGHTGRAY; font-size: 0.4em;">Teclados mecánicos 101</small></p> -->
-
 
 <!-- 
+
+Letras de colores:
+#feda6a => amarillo apagado
+tomato => rojo sutil
+yellowgreen => verde más intenso
+<h4>   => blanco
+
 
  ****** Voy a intentar usar este: 
 Are ya yellow?!: #feda6a
@@ -51,24 +69,23 @@ Night Blue Shadow: #12343b
 
 
 				<!-- Inicio de las slides -->
-				<section data-markdown data-background-color="#1d1e22">
+				<section data-markdown data-background-color="#1d1e22" data-background-opacity="0.2" data-background-image="./resources/amazing-keyboards/keyboard.png">
 					# Teclados mecánicos 101
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h1>⌨️</h1>
-					<p>Algunos temas que vamos a tratar:</p>
+				<section data-background-color="#1d1e22">
+					<!-- <h1>⌨️</h1> -->
+					<h3>Algunos temas que vamos a tratar</h3>
 					<ul>
-						<li>Diferentes tipos de teclado</li>
-						<li>Características de los teclados</li>
-						<li>Salud</li>
+						<li>Tipos de teclado más habituales</li>
+						<li>Características generales de los teclados</li>
+						<li>Salud: prevención de dolencias</li>
 						<li>Que tiene de especial un teclado mecánico</li>
-						<li>Consejos para adquirir un teclado</li>
-						<li>Mitos y leyendas!</li>
+						<li>Consejos para comprar un teclado mecánico</li>
 					</ul>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<h2 style="color: red;">Disclaimer!</h2>
 					<h1>👾</h1>
 					<p>Esta charla no va de teclados para gaming</p>
@@ -78,12 +95,12 @@ Night Blue Shadow: #12343b
 						Nos centraremos en teclados para personas que necesitas escribir: programadores, abogados, administrativos, etc.<br>
 						Ghosting => apretar alguna tecla y que además se escriba otra en cualquier otro punto del teclado<br>
 						NKRO => Límite máximo de teclas apretadas al mismo tiempo que son detectadas<br>
-						La velocidad del polling del USB.
+						USB polling => Frecuencia con la que el teclado por USB y el ordenador se comunican
 					</aside>
 				</section>
 
 				<section data-background-color="#1d1e22">
-					<h3 style="color:#feda6a;">Dídac García</h3>
+					<h3 style="color:#feda6a !important;">Dídac García</h3>
 					<p style="color:#d4d4dc;">web developer</p>
 					<a href="https://twitter.com/didaquis" target="_blank" alt="Twitter @didaquis">
 						@didaquis
@@ -93,8 +110,9 @@ Night Blue Shadow: #12343b
 					<a href="https://didaquis.github.io" target="_blank" alt="Página personal Dídac García" style="top: 20px;">didaquis.github.io</a>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<h3>¿Cuántos de vosotros tenéis un teclado mecánico?</h3>
+					<h1 style="margin-top: 50px;">🤔</h1>
 
 					<aside class="notes">
 						Para que os conozca un poco...<br>
@@ -103,20 +121,24 @@ Night Blue Shadow: #12343b
 				</section>
 
 				<section data-background-color="#1d1e22">
-					<h3>Hagamos un repaso de lo que sabemos sobre teclados, sean mecánicos o no.</h3>
+					<h4>Hagamos un repaso de lo que sabemos sobre teclados, sean mecánicos o no.</h4>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<h3>Historia del teclado informático</h3>
-					<p><small>Teletipos ➡️ Máquina de escribir ➡️ Teclado informático</small></p>
+					
 					<ul>
 						<li>Primeros diseños de teletipos y máquinas de escribir (siglos XVIII y XIX)</li>
 						<li>Hacia 1920, la máquina de escribir había alcanzado un diseño más o menos estándar (QWERTY, 1868)</li>
 						<li>En los 70 llegan los teclados informáticos domésticos tal como los conocemos hoy en día (Atari 8-bit family, Apple II series, IBM PC, etc.)</li>
 					</ul>
+
+					<aside class="notes">
+						Teletipos ➡️ Máquina de escribir ➡️ Teclado informático
+					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<h3>IBM Model M (1985)</h3>
 					<p><small>Consolidando el teclado que todos conocemos</small></p>
 					<img src="./resources/classic-models/ibm_model_m.png" alt="IBM Model M" width="75%" style="border: none; background: none; box-shadow: none;">
@@ -130,40 +152,40 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Tipos de teclado</h3>
-					<p>Hay un montón de tipos de teclado! Podríamos clasificarlos por múltiples criterios, por ejemplo:</p>
+				<section data-background-color="#1d1e22">
+					<h3>Características de un teclado</h3>
 					<ul>
-						<li>Tipos de pulsación</li>
-						<li>Distribución de las teclas</li>
+						<li>Tipos de pulsació</li>
+						<li>Disposición física de las teclas</li>
 						<li>Distribución del alfabeto</li>
 						<li>Número de teclas</li>
 					</ul>
-				</section>
-
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Tipos de pulsación</h3>
-					<p>Algunos que seguramente ya conocéis:</p>
-					<ul>
-						<li>Teclados capacitivos</li>
-						<li>Teclados en pantalla</li>
-						<li>Teclados mecánicos</li>
-						<li>Teclados de membrana</li>
-						<li>Teclados de tijera</li>
-					</ul>
 
 					<aside class="notes">
-						Capacitivos => móvil.<br>
-						En pantalla (virtuales) => accesibilidad. Se pueden usar con un ratón o con un joystick<br>
-						Mecánicos => Mecánicamente hay un contacto que permite un pulso eléctrico, luego os lo enseño.<br>
-						Membrana => Son dos membranas, que al pulsarse permiten pulso eléctrico. Es el más común hoy en día.<br>
-						Tijera => El teclado más conocido de los Mac
+						Hay muchos tipos de teclado. Estas son algunas de sus características
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Distribución de las teclas</h3>
-					<p>Disposición física de las teclas:</p>
+				<section data-background-color="#1d1e22">
+					<h3>Mecanismo de pulsación</h3>
+					<ul>
+						<li>Teclados de membrana</li>
+						<li>Teclados de tijera</li>
+						<li>Teclados mecánicos</li>
+					</ul>
+
+					<aside class="notes">
+						Estos son los más comunes:<br>
+						Membrana => Son dos membranas, que al pulsarse permiten pulso eléctrico. Es el más común hoy en día.<br>
+						Tijera => El teclado más conocido de los Mac.<br>
+						Mecánicos => Mecánicamente hay un contacto que permite un pulso eléctrico, luego os lo enseño.<br>
+						Capacitivos => móvil.<br>
+						En pantalla (virtuales) => accesibilidad. Se pueden usar con un ratón o con un joystick
+					</aside>
+				</section>
+
+				<section data-background-color="#1d1e22">
+					<h3>Disposición física de las teclas</h3>
 					<ul>
 						<li>ANSI</li>
 						<li>ISO (ISO-UK, ISO-FR, ISO-ES, etc...)</li>
@@ -173,41 +195,54 @@ Night Blue Shadow: #12343b
 					<aside class="notes">
 						ANSI => Norte América (también usado en Países Bajos)<br>
 						ISO => Europa (casi todos los países europeos)<br>
-						JIS => Japón (permite usar caracteres "hiragana")
+						JIS => Japón (permite alternar entre caracteres anglosajones y caracteres "hiragana")
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>ANSI vs ISO</h3>
+				<section data-background-color="#1d1e22">
+					<h4>ANSI vs ISO</h4>
 					<img src="./resources/layouts/ansi.png" alt="ansi" width="75%" style="border: none; background: none; box-shadow: none;">
 					<img src="./resources/layouts/iso.png" alt="iso" width="75%" style="border: none; background: none; box-shadow: none;">
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<h3>Distribución del alfabeto</h3>
-					<p>QWERTY</p>
+					<ul>
+						<li>QWERTY</li>
+						<li>Dvorak</li>
+					</ul>
+
+					<aside class="notes">
+						Otras: Bépo (útil para francés), Colemak y Workman.<br>
+						https://bepo.fr/wiki/Accueil, https://colemak.com y https://workmanlayout.org
+					</aside>
+				</section>
+
+				<section data-background-color="#1d1e22">
+					<h4>QWERTY</h4>
 					<img src="./resources/classic-models/typewriter_stuck.jpg" alt="máquina de escribir atascada" width="70%" style="border: none; background: none; box-shadow: none;">
 
 					<aside class="notes">
 						Los más conocidos: QWERTY, Dvorak, Bépo, Colemak y Workman. https://bepo.fr/wiki/Accueil, https://colemak.com y https://workmanlayout.org<br>
-						QWERTY => Diseñado para evitar atascos en las máquinas de escribir.<br>
+						QWERTY => Diseñado para evitar atascos en las máquinas de escribir (1868).<br>
 						Palabras difíciles de escribir en QWERTY: "mínimo", "cerveza".
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>Dvorak</p>
+				<section data-background-color="#1d1e22">
+					<h4>Dvorak</h4>
 					<img src="./resources/layouts/US_Dvorak.png" alt="dvorak" style="border: none; background: none; box-shadow: none;">
 					<aside class="notes">
-						Dvorak => Diseñado por August Dvorak y William Dealey para ser eficiente, menor fatiga al usuario (escritura en inglés) (1936). No cuajó: USA aún estaba saliendo de la gran depresión, 2ª guerra mundial, la costumbre establecida. etc.<br>
+						Dvorak => Diseñado por August Dvorak y William Dealey para ser eficiente, menor fatiga al usuario (escritura en inglés) (USA, 1936).<br>
+						Empíricamente es mejor que QWERTY<br>
+						No cuajó: USA aún estaba saliendo de la gran depresión, 2ª guerra mundial, la costumbre establecida (más de 100 años). etc.<br>
 						Parece ser que es útil para los que padecen síndrome de túnel carpiano.<br>
 						Todos los SO tiene soporte para Dvorak (en inglés), es un estándar.
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<h3>Número de teclas</h3>
-					<p>Clasificación según el número de teclas:</p>
 					<ul>
 						<li>100%</li>
 						<li>Tenkeyless (TKL, 80%)</li>
@@ -219,8 +254,8 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>100% vs TKL vs 60%</p>
+				<section data-background-color="#1d1e22">
+					<h4>100% vs TKL vs 60%</h4>
 					<img src="./resources/form-factor/number_of_keys.png" alt="número de teclas" width="74%" style="border: none; background: none; box-shadow: none;">
 
 					<aside class="notes">
@@ -230,22 +265,27 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>Why not?</p>
+				<section data-background-color="#1d1e22">
+					<h4>Why not?</h4>
 					<img src="./resources/form-factor/mini_keyboard.jpg" alt="teclado numérico" width="74%" style="border: none; background: none; box-shadow: none;">
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<h3>Teclados ergonómicos</h3>
 					<img src="./resources/health/ergonomic_01.jpg" alt="teclado ergonómico" width="74%" style="border: none; background: none; box-shadow: none;">
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Síndrome del túnel carpiano 😱</h3>
+				<section data-background-color="#1d1e22">
+					<h3>Síndrome del túnel carpiano <span style="margin-left: 10px;">😱</span></h3>
 					<img src="./resources/health/stc_01.png" alt="síndrome del túnel carpiano" width="58%" style="border: none; background: none; box-shadow: none;">
+
+					<aside class="notes">
+						Es una dolencia que se produce al comprimir/presionar el nervio carpiano. Produce inflamación, que a su vez retroalimenta la dolencia.<br>
+						En España está reconocida como enfermedad profesional.
+					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<img src="./resources/health/position_01.gif" alt="posturas para prevenir síndrome del túnel carpiano" width="49%" style="border: none; background: none; box-shadow: none;">
 					<img src="./resources/health/position_02.gif" alt="posturas para prevenir síndrome del túnel carpiano" width="49%" style="border: none; background: none; box-shadow: none;">
 
@@ -256,15 +296,14 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<img src="./resources/health/position_chair.jpg" alt="posturas para prevenir síndrome del túnel carpiano" width="80%" style="border: none; background: none; box-shadow: none;">
 					<aside class="notes">
 						Grandes aliados: Apoyabrazos (silla) - reposamuñecas (mesa)
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Teclados ergonómicos</h3>
+				<section data-background-color="#1d1e22">
 					<img src="./resources/health/ergonomic_02.jpg" alt="teclado ergonómico" width="74%" style="border: none; background: none; box-shadow: none;">
 
 					<aside class="notes">
@@ -273,7 +312,7 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<!-- <section data-background-color="#1d1e22">
 					<h3>Teclados ergonómicos</h3>
 					<img src="./resources/health/ergonomic_03.jpg" alt="teclado ergonómico" width="74%" style="border: none; background: none; box-shadow: none;">
 
@@ -281,40 +320,41 @@ Night Blue Shadow: #12343b
 						Ángulo del codo<br>
 						Escápulas (codos ligeramente hacia afuera)
 					</aside>
-				</section>
+				</section> -->
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Teclados personalizados</h3>
-					<p>Uso de un software de edición de video profesional</p>
+				<section data-background-color="#1d1e22">
+					<h3>Teclados especializados</h3>
 					<img src="./resources/special-keyboards/mac_avid.png" alt="teclado ergonómico" width="74%" style="border: none; background: none; box-shadow: none;">
 
 					<aside class="notes">
+						Teclado específico para un software de edición de video profesional<br>
 						Un montador de video podría optimizar mucho su trabajo.
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<h3>Otras cosas a tener en cuenta</h3>
 					<ul>
 						<li>Retroiluminación</li>
 						<li>Cable vs inalámbrico</li>
 						<li>Drivers / software de configuración</li>
+						<li>Altura, inclinación y peso del teclado</li>
 					</ul>
 
 					<aside class="notes">
-						Retrolimunicación => LED<br>
+						Retroiluminación => LED (monocolor o RGB)<br>
 						Cableado (mi recomendación, opinión totalmente personal) => PS/2 o USB.<br>
-						Inalámbrico => Bluetooth, radio frecuencia (2.4 GHz). Existen otros: infrarrojos o WiFi<br>
-						Drivers / software => A veces se necesita: configurar luces, remapear teclas, teclas multimedia (compatibilidad con tu SO), etc. Guay! ¿Pero... porqué necesito registrarme en un servicio online para usar un teclado? Cualquier setting que necesite el teclado se podría guardar en una memoria interna del teclado y evitar un servicio online que implique un registro.<br>
-						La altura del teclado y su inclinación.
+						Inalámbrico (requerirán batería) => Bluetooth, radio frecuencia (2.4 GHz). Existen otros: infrarrojos o WiFi.<br>
+						Drivers / software => A veces se necesita: configurar luces, remapear teclas, teclas multimedia (compatibilidad con tu SO), etc.<br>
+						¿Por qué necesito registrarme en un servicio online para usar un teclado? Cualquier setting que necesite el teclado se podría guardar en una memoria interna del teclado y evitar un servicio online que implique un registro.
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Hablemos de teclados mecánicos</h3>
+				<section data-background-color="#1d1e22">
+					<h4>Hablemos de teclados mecánicos</h4>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<h3>La magia de los teclados mecánicos</h3>
 					<p>En un teclado mecánico, cada tecla está formada por la combinación de un "switch" y un "keycap".</p>
 					<img data-src="./resources/keycaps/keycaps_04.png" alt="switch y keycap" width="60%" style="border: none; background: none; box-shadow: none;">
@@ -325,18 +365,20 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<!-- <h3>Mecanismos de pulsación</h3> -->
-					<p>Al comprar un teclado mecánico, es posible escoger el comportamiento al pulsar una tecla.</p>
+				<section data-background-color="#1d1e22">
+					<h3>Switch</h3>
+					<p>Al comprar un teclado mecánico, es posible decidir el comportamiento de las teclas.</p>
 					<p>De esto se encargan los switches</p>
-					<br>
-					<h2>🤔</h2>
+
+					<aside class="notes">
+						¿Qué quiero decir con "el comportamiento"?
+					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Switches</h3>
-						<img data-src="./resources/mechanism/kailh_silver_speed_hr_optimized.gif" alt="switch Kailh Speed Silver" width="60%" style="border: none; background: none; box-shadow: none;">
-						<img src="./resources/mechanism/switch_specs.jpg" alt="características del switch Kailh Speed Silver" width="29%" style="border: none; background: none; box-shadow: none; vertical-align: top">
+				<section data-background-color="#1d1e22">
+					<img data-src="./resources/mechanism/kailh_silver_speed_hr_optimized.gif" alt="switch Kailh Speed Silver" width="60%" style="border: none; background: none; box-shadow: none;">
+					<img src="./resources/mechanism/switch_specs.jpg" alt="características del switch Kailh Speed Silver" width="29%" style="border: none; background: none; box-shadow: none; vertical-align: top">
+
 					<aside class="notes">
 						El fabricante nos indica la fuerza que debemos ejercer sobre el pulsador, el recorrido de éste y su duración.<br>
 						El fabricante indica una fuerza de: 40 centinewtons.<br>
@@ -344,8 +386,8 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>Clicky vs linear vs tactile</p>
+				<section data-background-color="#1d1e22">
+					<h4>Clicky vs linear vs tactile</h4>
 					<img data-src="./resources/mechanism/cherry_mx_blue_switch_optimized.gif" alt="switch Cherry MX blue" width="32%" style="border: none; background: none; box-shadow: none;">
 					<img data-src="./resources/mechanism/cherry_mx_red_switch_optimized.gif" alt="switch Cherry MX red" width="32%" style="border: none; background: none; box-shadow: none;">
 					<img data-src="./resources/mechanism/cherry_mx_brown_switch_optimized.gif" alt="switch Cherry MX brown" width="32%" style="border: none; background: none; box-shadow: none;">
@@ -359,8 +401,8 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>switch tester</p>
+				<section data-background-color="#1d1e22">
+					<h4>switch tester</h4>
 					<img data-src="./resources/mechanism/mechanical_switch_tester.png" alt="switch Cherry MX blue" width="70%" style="border: none; background: none; box-shadow: none;">
 
 					<aside class="notes">
@@ -368,23 +410,27 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>debounce time?</p>
+				<!-- <section data-background-color="#1d1e22">
+					<h4>debounce time?</h4>
 					<img data-src="./resources/keyboards-issues/analog_waveform_cherry_mx.png" alt="respuesta de Cherry MX en un osciloscopio" width="70%" style="border: none; background: none; box-shadow: none;">
 
 					<aside class="notes">
 						Osciloscopio. Es un instrumento para la representación gráfica de señales eléctricas que pueden variar en el tiempo.<br>
 						Este imagen muestra la fluctuación que se produce en un interruptor de un circuito digital.<br>
-						Voltios por tiempo.
+						Voltios por tiempo.<br>
 					</aside>
-				</section>
+				</section> -->
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>debounce time?</p>
+				<section data-background-color="#1d1e22">
+					<h3>debounce time?</h3>
 					<img data-src="./resources/keyboards-issues/switch_debounce_digital_circuitos.png" alt="respuesta de Cherry MX en un osciloscopio" width="70%" style="border: none; background: none; box-shadow: none;">
 
 					<aside class="notes">
-						El tiempo de "debounce" en un switch Cherry MX puede llegar a 5ms. Podríamos decir, que un teclado mécanico tiene una latencia media de 15-25ms, mientras que un teclado de membrana tiene una latencia por encima de 30ms. En un teclado de baja calidad puede llegar a 60ms<br>
+						Osciloscopio. Es un instrumento para la representación gráfica de señales eléctricas que pueden variar en el tiempo.<br>
+						Este imagen muestra la fluctuación que se produce en un interruptor de un circuito digital.<br>
+						Voltios por tiempo.<br>
+						El tiempo de "debounce" en un switch Cherry MX puede llegar a 5ms.<br>
+						Aproximadamente un teclado mécanico tiene una latencia media de 15-25ms (incluyendo la electrónica, USB polling rate), mientras que un teclado de membrana tiene una latencia por encima de 30ms. En un teclado de baja calidad puede llegar a 60ms<br>
 						Ahora bien, no nos importa. Hay otros factores que afectan a la latencia: recorrido de la tecla, la percepción humana a un estímulo, tasa de refresco del monitor, el sistema de polling de los USB, etc.<br>
 						Dado que esto no es una charla sobre gaming, lo resumiremos en que nos dan igual estos factores si compramos un teclado bueno (independientemente de que sea mecánico o no).<br>
 						--------<br>
@@ -404,8 +450,8 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>switch óptico</p>
+				<section data-background-color="#1d1e22">
+					<h4>switch óptico</h4>
 					<img data-src="./resources/mechanism/razer-opto-mechanical-switch_switch optico_bis.gif" alt="switch óptico" style="border: none; background: none; box-shadow: none;">
 
 					<aside class="notes">
@@ -415,8 +461,8 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>clásico vs óptico</p>
+				<section data-background-color="#1d1e22">
+					<h4>Tiempo de fluctuación en un interruptor clásico vs interruptor óptico</h4>
 					<img data-src="./resources/keyboards-issues/digital_cuircuits_debounce_01.png" alt="debounce time clásico" width="49%" style="border: none; background: none; box-shadow: none;">
 					<img data-src="./resources/keyboards-issues/digital_cuircuits_debounce_02.png" alt="debounce time óptico" width="49%" style="border: none; background: none; box-shadow: none;">
 
@@ -427,26 +473,24 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<!-- <h3>Tipos de teclas</h3> -->
-					<p>Aprendamos un poco sobre las keycaps.</p>
+				<section data-background-color="#1d1e22">
+					<h3>Keycaps</h3>
 					<p>Se fabrican en diferentes materiales, el grosor y su forma varía según el fabricante y además, deben de poder conectarse con los switches de tu teclado</p>
-					<h2>🤔</h2>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Keycaps</h3>
+				<section data-background-color="#1d1e22">
+					<h4>Keycaps</h4>
 					<img data-src="./resources/keycaps/keycaps_03.png" alt="keycaps" width="60%" style="border: none; background: none; box-shadow: none;">
 				</section>
 
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<p>Los principales materiales son: ABS y PBT.</p>
 					<p>Tienen diferente tacto y durabilidad</p>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>ABS</p>
+				<section data-background-color="#1d1e22">
+					<h4>ABS</h4>
 					<img data-src="./resources/keycaps/abs.png" alt="abs" width="76%" style="border: none; background: none; box-shadow: none;">
 					<aside class="notes">
 						Con el uso se desgasta y se muestra abrillantado.<br>
@@ -454,8 +498,8 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>PBT</p>
+				<section data-background-color="#1d1e22">
+					<h4>PBT</h4>
 					<img data-src="./resources/keycaps/pbt.png" alt="abs" width="70%" style="border: none; background: none; box-shadow: none;">
 					<aside class="notes">
 						No se abrillanta y tiene un tacto más rugoso que el ABS.<br>
@@ -463,8 +507,8 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>Grosor, forma y perfil</p>
+				<section data-background-color="#1d1e22">
+					<h4>Grosor y forma</h4>
 					<img data-src="./resources/keycaps/forma_de_tecla.png" alt="diferente forma de tecla" style="border: none; background: none; box-shadow: none;">
 					<aside class="notes">
 						Las keycaps del teclado se pueden quitar y poner.<br>
@@ -473,20 +517,20 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>Grosor, forma y perfil</p>
+				<section data-background-color="#1d1e22">
+					<h4>Diferentes calidades</h4>
 					<img data-src="./resources/keycaps/teclas.png" alt="diferente forma de tecla" style="border: none; background: none; box-shadow: none;">
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>Grosor, forma y perfil</p>
+				<section data-background-color="#1d1e22">
+					<h4>Perfil de una tecla</h4>
 					<img data-src="./resources/keycaps/profile_02.png" alt="diferente perfil de tecla" style="border: none; background: none; box-shadow: none;">
 					<aside class="notes">
 						Diferentes perfiles (profile).<br>
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<img data-src="./resources/keycaps/profile_01.png" alt="diferencias entre perfiles" style="border: none; background: none; box-shadow: none;">
 					<aside class="notes">
 						R1 => ESC, F1, F2 ...<br>
@@ -500,8 +544,8 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>Deben de encajar con el correspondiente switch</p>
+				<section data-background-color="#1d1e22">
+					<h4>Cada keycap con su correspondiente switch</h4>
 
 					<img src="./resources/keycaps/Key_Steams_Topre.png" alt="keycap de tipo Topre" width="38%" style="border: none; background: none; box-shadow: none;">
 					<img src="./resources/keycaps/Key_Steams_Alps.png" alt="switch de tipo Alps" width="59%" style="border: none; background: none; box-shadow: none; vertical-align: top">
@@ -512,8 +556,8 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>standard bottom row</p>
+				<section data-background-color="#1d1e22">
+					<h4>standard bottom row</h4>
 
 					<img src="./resources/layouts/standard-bottom-row-min.png" alt="última fila estándar" style="border: none; background: none; box-shadow: none;">
 					<img src="./resources/layouts/non-standard-bottom-row-min.png" alt="última fila no estándar" style="border: none; background: none; box-shadow: none; vertical-align: top">
@@ -525,8 +569,8 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>Existen diferentes sistemas de impresión</p>
+				<section data-background-color="#1d1e22">
+					<h4>Existen diferentes sistemas de impresión</h4>
 
 					<img src="./resources/keycaps/keycaps_fun.png" alt="keycaps con dibujos chulos" style="border: none; background: none; box-shadow: none;">
 
@@ -537,8 +581,8 @@ Night Blue Shadow: #12343b
 				</section>
 
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>Double shot injection</p>
+				<section data-background-color="#1d1e22">
+					<h4>Double shot injection</h4>
 
 					<img src="./resources/keycaps/doubleshot_01.png" alt="Double shot injection" style="border: none; background: none; box-shadow: none;">
 
@@ -548,14 +592,15 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<p>Se pueden hacer teclas muy bonitas y trabajadas</p>
+				<section data-background-color="#1d1e22">
+					<h4>Teclas personalizadas</h4>
 
 					<img src="./resources/keycaps/fun_keycap.png" alt="keycap personalizada" width="80%" style="border: none; background: none; box-shadow: none;">
 
 					<aside class="notes">
 						Hay mercado de coleccionismo y artesanía<br>
-						Observad que esta tecla tiene relieve en 4 caras distintas y esta hecha en múltiples colores.
+						Observad que esta tecla tiene relieve en 4 caras distintas y esta hecha en múltiples colores.<br>
+						Observad también que es un teclado con layout JIS.
 					</aside>
 				</section>
 
@@ -564,56 +609,56 @@ Night Blue Shadow: #12343b
 
 
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<img data-src="./resources/amazing-keyboards/varmilo_forest_failry.png" alt="teclados bonitos" style="border: none; background: none; box-shadow: none;">
 					<aside class="notes">
 						Varmilo.
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<img data-src="./resources/amazing-keyboards/varmilo_sea_melody.png" alt="teclados bonitos" style="border: none; background: none; box-shadow: none;">
 					<aside class="notes">
 						Varmilo.
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<img data-src="./resources/amazing-keyboards/orangefinal.jpg" alt="teclados bonitos" style="border: none; background: none; box-shadow: none;">
 					<aside class="notes">
 						Observad la tecla ESC y el cable USB a juego con los colores del teclado.
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<img data-src="./resources/amazing-keyboards/keyboard_pink_floyd.jpg" alt="teclados bonitos" style="border: none; background: none; box-shadow: none;">
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<img data-src="./resources/amazing-keyboards/keyboard_1976.jpg" alt="teclados bonitos" style="border: none; background: none; box-shadow: none;">
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<img data-src="./resources/amazing-keyboards/wood_02.png" alt="teclados bonitos" style="border: none; background: none; box-shadow: none;">
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<img data-src="./resources/amazing-keyboards/wood_01.png" alt="teclados bonitos" style="border: none; background: none; box-shadow: none;">
 
 					<aside class="notes">
-						Observad que es un teclado con reposabrazos incluido. Esta hecho de una sola pieza de madera.
+						Observad que es un teclado con reposamuñecas incluido. Esta hecho de una sola pieza de madera.
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<img data-src="./resources/amazing-keyboards/pokemon.png" alt="teclados bonitos" style="border: none; background: none; box-shadow: none;">
 
 					<aside class="notes">
-						Diseño inspirado en Pokémon
+						Diseño inspirado en Pokémon. La impresión de las teclas es personalizada.
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<img data-src="./resources/amazing-keyboards/cool.png" alt="teclados bonitos" style="border: none; background: none; box-shadow: none;">
 
 					<aside class="notes">
@@ -623,17 +668,17 @@ Night Blue Shadow: #12343b
 
 
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<img data-src="./resources/amazing-keyboards/60.png" alt="teclados bonitos" style="border: none; background: none; box-shadow: none;">
 
 					<aside class="notes">
-						Esto es un modelo de tamaño 60% y con luces LED. Marca: Glorious PC, modelo: GMMK.
+						Esto es un modelo de tamaño 60% y con luces LED RGB. Marca: Glorious PC, modelo: GMMK.
 					</aside>
 				</section>
 
 
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
+				<section data-background-color="#1d1e22">
 					<h3>Marcas de teclados mecánicos</h3>
 					<br>
 					<p>Leopold, Filco, Matias, Ducky, Varmilo, Vortex</p>
@@ -650,17 +695,16 @@ Night Blue Shadow: #12343b
 				</section>
 
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>¿Cuánto cuesta un teclado mecánico</h3>
-					<br>
-					<p>< 70 euros = 💩</p>
-					<p>70 - 99 euros = ⭐️ ⭐️</p>
+				<section data-background-color="#1d1e22">
+					<h3>¿Cuánto cuesta un teclado mecánico?</h3>
+					<p style="margin-top: 50px;">< 70 euros = 💩</p>
+					<p>70 - 100 euros = ⭐️ ⭐️</p>
 					<p>> 100 euros = ⭐️ ⭐️ ⭐️ ⭐️</p>
 					<p>~ 130 euros = ⭐️ ⭐️ ⭐️ ⭐️ ⭐️</p>
 
 					<aside class="notes">
 						Por debajo de 70 € sólo os parecerán buenos si nunca habéis usado un teclado mecánico antes. Las teclas son de ABS, los switches son de mala calidad, etc.<br>
-						Entre 70 y 99 € hay algunas cosas decentes si buscáis bien y sois observadores.<br>
+						Entre 70 y 100 € hay algunas cosas decentes si buscáis bien y sois observadores.<br>
 						A partir de 100 € empiezan los modelos buenos.<br>
 						Un precio coherente serían para un "BUEN" teclado serían unos 130 €.<br>
 						A estos precios, les tendréis que sumar el precio de transporte. Y según donde lo compréis, las aduanas (USA, Corea, China, Japón, etc).<br>
@@ -668,17 +712,14 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Mitos y leyendas!</h3>
-					<br>
-					<p>¿Los teclados mecánicos son mejores que los de membrana?</p>
-					<h2>🤔</h2>
+				<section data-background-color="#1d1e22">
+					<h3>¿Los teclados mecánicos son mejores que los de membrana?</h3>
+					<h1 style="margin-top: 50px;">🤔</h1>
 				</section>
 
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>⚠️ UNPOPULAR</h3>
-					<h3>OPINION ⚠️</h3>
-					<h2>⚠️</h2>
+				<section data-background-color="#1d1e22">
+					<h2 style="color: red;">UNPOPULAR OPINION!</h2>
+					<h1 style="margin-top: 50px;">⚠️</h1>
 
 					<aside class="notes">
 						Unpopular => mucha gente no va a estar de acuerdo conmigo<br>
@@ -690,25 +731,23 @@ Night Blue Shadow: #12343b
 					</aside>
 				</section>
 
-
-				<section data-background-color="#1d1e22" style="color: #d4d4dc;">
-					<h3>Consejos</h3>
-					<br>
-					<p>Usad cualquier teclado <strong>bueno</strong> con el que os sintáis a gusto.</p>
-					<p>Prestad atención a vuestra <strong>salud</strong> al usar un ordenador.</p>
+				<section data-background-color="#1d1e22">
+					<h3>Dos consejos</h3>
+					<p style="margin-top: 50px;">Usad cualquier teclado con el que os sintáis cómodos, pero procurad que sea un buen teclado.</p>
+					<p style="margin-top: 50px;">Prestad atención a vuestra salud al usar un ordenador.</p>
 
 					<aside class="notes">
 						El teclado es una herramienta de trabajo, procurad siempre usar herramientas de calidad.<br>
-						Probablemente voy a escribir en el ordenador los próximos 30 años de mi vida profesional, sería un necio si no presto atención a los problemas de salud que pueda tener por uso incorrecto del teclado o un mala postura.<br>
-						Si es necesario, que no os de pereza probar Dvorak, un reposamuñecas o simplemente cambiar de teclado.
+						Probablemente yo voy a escribir en el ordenador los próximos 30 años de mi vida profesional, sería un necio si no prestara atención a los problemas de salud que pueda tener por uso incorrecto del teclado o un mala postura.<br>
+						Si es necesario: que no os de pereza probar Dvorak, un reposamuñecas o cambiar de teclado.
 					</aside>
 				</section>
 
 				<section>
-					<section data-background-color="#1d1e22" data-background-opacity="0.2" data-background-image="./resources/amazing-keyboards/keyboard.png" style="color: #d4d4dc;">
-						<h3 style="color:#d4d4dc;">Teclados mecánicos 101</h3>
+					<section data-background-color="#1d1e22" data-background-opacity="0.2" data-background-image="./resources/amazing-keyboards/keyboard.png">
+						<h3 style="color:#FFFFFF !important;">Teclados mecánicos 101</h3>
 						<br>
-						<h3 style="color:#feda6a;">Dídac García</h3>
+						<h3 style="color:#feda6a !important;">Dídac García</h3>
 						<a href="https://twitter.com/didaquis" target="_blank" alt="Twitter @didaquis">
 							@didaquis
 							<img src="./resources/twitter-logo.png" alt="Twitter logo" style="border: none; background: none; box-shadow: none; width: 60px; margin-top: 10px; position: absolute;">
