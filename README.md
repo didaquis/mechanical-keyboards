@@ -30,6 +30,7 @@ Un listado de teclas útiles:
 * lleva un teclado de tijera, uno de membrana y uno mecánico
 * Actualiza tu repo local en la máquina en la que vayas a hacer la charla
 * Asegúrate de saber como vas a conectar la máquina en la que vas a hacer la charla a un proyecto o pantalla grande
+* Pon un cronómetro al iniciar la charla
 
 
 ## Algunos consejos para crear slides
