@@ -24,6 +24,14 @@ Un listado de teclas útiles:
 | ALT + click | Realiza un zoom en el lugar donde hayas clicado. Repite la combinación para vover a la vista normal (debes cargar el plugin: zoom) | 
 
 
+## A tener en cuenta para hacer la charla
+
+* Lleva un poco de agua
+* lleva un teclado de tijera, uno de membrana y uno mecánico
+* Actualiza tu repo local en la máquina en la que vayas a hacer la charla
+* Asegúrate de saber como vas a conectar la máquina en la que vas a hacer la charla a un proyecto o pantalla grande
+
+
 ## Algunos consejos para crear slides
 ```html
 <section>
