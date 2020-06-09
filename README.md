@@ -4,6 +4,8 @@ Este repositorio contiene la presentación de una charla introductoria a los tec
 
 https://github.com/didaquis/mechanical-keyboards  
 
+![cover](./resources/cover.png)  
+
 ## Para iniciar la presentación
 Iniciar la presentación requiere Node.js versión 9 o superior. La presentación esta realizada con [Reveal.js](https://github.com/hakimel/reveal.js)  
 
