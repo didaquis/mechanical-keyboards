@@ -33,6 +33,20 @@
 			ul li {
 				list-style-type: circle;
 			}
+
+			kbd.keyboard-input {
+				background-color: white;
+				color: black;
+				border-radius: 4px;
+				padding: 0 10px;
+				margin-left: 10px;
+				margin-right: 10px;
+				box-shadow: inset 0 -1px 0 rgba(0,0,0,.25);
+				box-sizing: border-box;
+				white-space: nowrap;
+				font-family: monospace,Monaco,Consolas,"Courier New";
+				text-transform: uppercase;
+			}
 		</style>
 	</head>
 	<body>
@@ -327,21 +341,86 @@ Night Blue Shadow: #12343b
 				</section>
 
 				<section data-background-color="#1d1e22">
-					<h3>Conceptos avanzados</h3>
-					<ul>
-						<li>Ghosting</li>
-						<li>NKRO</li>
-						<li>USB polling</li>
-						<li>Debounce time</li>
-					</ul>
+					<section>
+						<h3>Conceptos avanzados</h3>
+						<ul>
+							<li>Ghosting</li>
+							<li>NKRO</li>
+							<li>USB polling rate</li>
+							<li>Debounce time</li>
+						</ul>
 
-					<aside class="notes">
-						Ghosting => apretar alguna tecla y que además se escriba otra en cualquier otro punto del teclado (todos los teclados buenos lo tienen resuelto)<br>
-						NKRO => Límite máximo de teclas apretadas al mismo tiempo que son detectadas (todos los teclados buenos lo tienen resuelto)<br>
-						USB polling => Frecuencia con la que el teclado por USB y el ordenador se comunican (irrelevante para nosotros)<br>
-						Debounce time => tiempo que pasa desde que se pulsa la tecla hasta que la pulsación es detectada a nivel eléctrico (todos los teclados buenos lo tienen resuelto)<br>
-						No caigáis en la trampa del marketing. Estas 4 palabras están muy presentes en los teclados de gamming.
-					</aside>
+						<aside class="notes">
+							Ghosting => apretar alguna tecla y que además se escriba otra en cualquier otro punto del teclado (todos los teclados buenos lo tienen resuelto)<br>
+							NKRO => Límite máximo de teclas apretadas al mismo tiempo que son detectadas (todos los teclados buenos lo tienen resuelto)<br>
+							USB polling rate => Frecuencia con la que el teclado por USB y el ordenador se comunican (irrelevante para nosotros)<br>
+							Debounce time => tiempo que pasa desde que se pulsa la tecla hasta que la pulsación es detectada a nivel eléctrico (todos los teclados buenos lo tienen resuelto)<br>
+							No caigáis en la trampa del marketing. Estas 4 palabras están muy presentes en los teclados de gamming.
+						</aside>
+					</section>
+
+					<section>
+						<h4>Ghosting</h4>
+						<p>Al pulsar a la vez las teclas <kbd class="keyboard-input">a</kbd> y <kbd class="keyboard-input">s</kbd> se escribe otra letra. Por ejemplo, la <kbd class="keyboard-input">v</kbd>.</p>
+						<h1 style="margin-top: 50px;">😲</h1>
+
+						<aside class="notes">
+							Hoy en día sólo pasa en aquellos teclados de membrana de muy baja calidad. Era habitual en los 90.
+						</aside>
+					</section>
+
+					<section>
+						<h4>NKRO</h4>
+
+						<p style="margin-top: 50px;">2-KRO = Máximo dos teclas detectadas a la vez</p>
+						<p>5-KRO = Máximo 5 teclas detectadas a la vez</p>
+						<p>6-KRO = Máximo 6 teclas detectadas a la vez</p>
+						<p>NKRO = Todas las teclas detectadas a la vez</p>
+
+						<p style="margin-top: 50px;"><small>Las teclas <kbd class="keyboard-input">CTRL</kbd>, <kbd class="keyboard-input">SHIFT</kbd>, <kbd class="keyboard-input">ALT</kbd> y la tecla del sistema operativo no se cuentan</small></p>
+
+						<aside class="notes">
+							Con 5-KRO es más que suficiente, no tendréis ningún problema con esto.<br>
+							Mi Varmilo es 5-KRO
+						</aside>
+					</section>
+
+					<section>
+						<h4>USB polling rate</h4>
+
+						<ul>
+							<li>125Hz / 8ms</li>
+							<li>250Hz / 4ms</li>
+							<li>500Hz / 2ms</li>
+							<li>1000Hz / 1ms</li>
+						</ul>
+
+						<aside class="notes">
+							En los teclados hay un microcontrolador que se encarga de hablar con vuestro ordenador a través del USB.<br>
+							Esta comunicación se hace mediante polling. Cuando una tecla es pulsada, en el próximo ciclo del polling se le enviará esa información al ordenador y éste la mandará al procesador para hacer lo que corresponda.<br>
+
+							El "polling rate" define el máximo retraso que tiene una conexión USB. A 125Hz el retraso puede ser entre 0 y 8 ms, y por tanto el promedio será de 4ms. El promedio para 1000Hz será de 0.5ms.<br>
+
+							El estándar para USB es 125Hz, y con ese valor es más que suficiente para un teclado. Aumentando los herzios tan solo conseguiréis añadirle más carga de trabajo a la CPU de vuestro ordenador y no seréis capaces de apreciar la diferencia.<br>
+							No paguéis ni un euro por esto!
+
+							<!-- The polling rate defines the maximum delay from the usb connection. At 125hz you can have 0ms to 8ms delay with an average of 4ms. At 1000hz 0ms to 1ms with average 0.5ms. The average difference between 125hz and 1000hz in theory should be 3.5ms which the data confirm.<br>
+
+							The keyboard scan rate can happen at different frequencies, often referred to as an x amount of hertz (Hz), just like the USB polling rate. A scan rate of 1000hz is equal to 1ms. This means that the MCU (https://es.wikipedia.org/wiki/Microcontrolador) will check every key, every 1ms for input.<br>
+
+							Common frequencies:<br>
+							• 125Hz / 8ms<br>
+							• 250Hz / 4ms<br>
+							• 500Hz / 2ms<br>
+							• 1000Hz / 1ms -->
+						</aside>
+
+
+					</section>
+
+					<section>
+						<h4>Debounce time</h4>
+					</section>
 				</section>
 
 				<section data-background-color="#1d1e22">
@@ -470,17 +549,7 @@ Night Blue Shadow: #12343b
 						--------<br>
 						De promedio, un monitor a 60Hz muestra un frame por 8.5ms. No se puede medir el lag de un teclado mirando un monitor, ni siquiera con uno de 144Hz.<br>
 						--------<br>
-						USB polling is a limiting factor.<br>
-
-						The polling rate defines the maximum delay from the usb connection. At 125hz you can have 0ms to 8ms delay with an average of 4ms. At 1000hz 0ms to 1ms with average 0.5ms. The average difference between 125hz and 1000hz in theory should be 3.5ms which the data confirm.<br>
-
-						The keyboard scan rate can happen at different frequencies, often referred to as an x amount of hertz (Hz), just like the USB polling rate. A scan rate of 1000hz is equal to 1ms. This means that the MCU will check every key, every 1ms for input.<br>
-
-						Common frequencies:<br>
-						• 125hz / 8ms (esto lo estándar)<br>
-						• 250hz / 4ms<br>
-						• 500hz / 2ms<br>
-						• 1000hz / 1ms  (esto es más rápido, pero añade más carga a la CPU)
+						USB polling rate (en su propia slide)
 					</aside>
 				</section>
 
