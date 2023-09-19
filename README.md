@@ -10,6 +10,7 @@ https://github.com/didaquis/mechanical-keyboards
 Iniciar la presentación requiere Node.js versión 9 o superior. La presentación esta realizada con [Reveal.js](https://github.com/hakimel/reveal.js)  
 
 * Descargar el repositorio
+* Utilizar Node.js versión 10.16
 * Instalar las dependencias: `npm install`
 * Iniciar la presentación: `npm start` o bien `npm start -- --port=8001` si quieres usar un puerto específico
 
